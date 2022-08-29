@@ -1,9 +1,7 @@
 //compress: true
 
 @import "vars";
-body {
-	margin: 0;
-}
+
 html {
     font-size: 15px;
 }
@@ -12,6 +10,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -45,6 +47,8 @@ body {
     @import "blocks/news";
     @import "blocks/articles";
     @import "blocks/footer";
+    @import "blocks/modal";
+    @import "blocks/modal-work";
     
     
     
