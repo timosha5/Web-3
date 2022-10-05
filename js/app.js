@@ -50,6 +50,8 @@ filter.on("click", function (event) {
                 transform: "scale(1)"
             });
         }, 200);
+
+        $('#worksSlider').slick('setPosition');
     });
 
 
@@ -86,6 +88,33 @@ filter.on("click", function (event) {
     $(".modal__dialog").on("click", function(event) {
         event.stopPropagation();
     });
+
+    /*  Slider =========== */
+
+    $('#[data-slider="slick"]').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true, 
+        arrows: false,
+        dots: true
+
+      }); 
+      $(".slickPrev").on("click", function(event) {
+        event.preventDefault();
+
+        let currenSlider = $(this).parents("modal")
+
+        $('worksSlider').slick("slickPrev");
+
+      });
+
+      $(".slickNext").on("click", function(event) {
+        event.preventDefault();
+
+        $('worksSlider').slick("slickNext");
+
+      });
 
 
 });

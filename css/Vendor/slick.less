@@ -1,8 +1,12 @@
+
+// main: ../style.less
 /* Slider */
 
 .slick-slider {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-sizing: border-box;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -20,6 +24,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    height: 100%;
 
     &:focus {
         outline: none;
@@ -46,6 +51,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
 
     &:before,
     &:after {
@@ -97,4 +103,51 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slock-dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    position: absolute;
+    bottom: 1.4rem;
+    left: 0;
+    z-index: 2;
+
+    li {
+        margin: 0 .5rem;
+        &.slick-active {
+            button {
+                background-color: #fff;
+            }
+            
+
+        }
+    }
+
+  
+
+    button {
+        width: 11px;
+        height: 11px;
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+        border-radius: 50%;
+
+        font-size: 0;
+        color: transparent;
+        cursor: pointer;
+
+        &:focus {
+            outline: 0;
+        }
+        
+    }
+
 }
